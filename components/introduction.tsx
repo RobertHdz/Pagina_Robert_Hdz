@@ -34,7 +34,7 @@ const Introduction = () => {
                         </Link>
                     </div>
         </div>
-                <Image src="/profile.png" alt="Profile pic" className="mx-auto mt-10" width={200} height={200} />
+                <Image src="/profile.png" alt="Profile pic" className="mx-auto my-20" width={200} height={200} />
             </div>
     </Container>
     );
