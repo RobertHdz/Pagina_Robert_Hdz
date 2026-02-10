@@ -34,7 +34,7 @@ const Introduction = () => {
                         </Link>
                     </div>
         </div>
-                <Image src="/profile.png" alt="Profile pic" width={200} height={200} />
+                <Image src="/profile.png" alt="Profile pic" className="flex items-center" width={200} height={200} />
             </div>
     </Container>
     );
