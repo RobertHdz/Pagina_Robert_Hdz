@@ -23,7 +23,7 @@ const Contact = () => {
                             {data.icon}
                             <p>{data.title}</p>
                             <p>{data.subtitle}</p>
-                            <Link href={data.link} target="_blank">
+                            <Link href={data.link} target="_blank" rel="noopener noreferrer">
                                 {content.button}
                             </Link>
                         </div>

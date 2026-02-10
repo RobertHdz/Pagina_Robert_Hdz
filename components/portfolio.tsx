@@ -31,6 +31,7 @@ const Portfolio = () => {
                                 className={buttonVariants()}
                                 href={data.urlDemo}
                                 target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 {content.demo}
                             </Link>

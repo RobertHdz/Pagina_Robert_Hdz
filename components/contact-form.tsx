@@ -15,7 +15,7 @@ import { dataText } from "@/data";
 const ContactForm = () => {
     const { language } = useLanguage();
     const content = dataText[language].contactForm;
-    const [sucessForm, setSucessForm] = useState(false)
+    const [successForm, setSuccessForm] = useState(false)
 
     const formSchema = z.object({
         username: z.string().min(2).max(50),
@@ -38,13 +38,13 @@ const ContactForm = () => {
             body: JSON.stringify(values)
         })
         if (response.status === 200) {
-            setSucessForm(true)
+            setSuccessForm(true)
         }
     }
 
     return (
         <Form {...form}>
-            {sucessForm ? (
+            {successForm ? (
                 <h4>{content.success}</h4>
             ) : (
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
