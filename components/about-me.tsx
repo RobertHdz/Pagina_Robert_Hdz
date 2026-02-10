@@ -55,7 +55,7 @@ const AboutMe = () => {
                                 <p className="my-2">{data.name}</p>
                                 <p className="text-gray-400">{data.description}</p>
                             </div>
-                        ))}
+                        ))} 
                     </div>
                     <p className="my-8 text-justify">{content.description}</p>
 
