@@ -218,6 +218,23 @@ export const dataExperience = {
                 { name: "Django", subtitle: "Basic", value: 30 },
             ],
         },
+        {
+            id: 3,
+            title: "Tools & Technologies 🛠️",
+            experience: [
+                { name: "Git", subtitle: "Advanced", value: 80 },
+                { name: "Docker", subtitle: "Intermediate", value: 60 },
+                { name: "n8n", subtitle: "Intermediate", value: 60 },
+            ],
+        },
+        {
+            id: 4,
+            title: "Languages 🗣️",
+            experience: [
+                { name: "Spanish", subtitle: "Native", value: 100 },
+                { name: "English", subtitle: "Intermediate", value: 40 },
+            ],
+        },
     ],
     es: [
         {
@@ -242,6 +259,23 @@ export const dataExperience = {
                 { name: "MySQL", subtitle: "Avanzado", value: 75 },
                 { name: "PHP", subtitle: "Basico", value: 30 },
                 { name: "Django", subtitle: "Basico", value: 30 },
+            ],
+        },
+        {
+            id: 3,
+            title: "Herramientas y Tecnologías 🛠️",
+            experience: [
+                { name: "Git", subtitle: "Avanzado", value: 80 },
+                { name: "Docker", subtitle: "Intermedio", value: 60 },
+                { name: "n8n", subtitle: "Intermedio", value: 60 },
+            ],
+        },
+        {
+            id: 4,
+            title: "Idiomas 🗣️",
+            experience: [
+                { name: "Español", subtitle: "Nativo", value: 100 },
+                { name: "Inglés", subtitle: "Intermedio", value: 40 },
             ],
         },
     ]
