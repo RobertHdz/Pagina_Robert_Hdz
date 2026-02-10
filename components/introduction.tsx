@@ -33,10 +33,10 @@ const Introduction = () => {
                             <Paperclip className="mr-2" /> {content.downloadCv}
                         </Link>
                     </div>
-                </div>
+        </div>
                 <Image src="/profile.png" alt="Profile pic" width={200} height={200} />
             </div>
-        </Container>
+    </Container>
     );
 }
 
