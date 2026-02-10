@@ -419,14 +419,14 @@ export const dataContact = {
 export const dataIntroduction = {
     en: {
         greeting: "Hello I´m",
-        name: "Robert Hernandez",
+        name: "Robert Hernández",
         profession: "Computer Engineering",
         contact: "Contact me",
         downloadCv: "Download CV",
     },
     es: {
         greeting: "Hola, soy",
-        name: "Robert Hernandez",
+        name: "Robert Hernández",
         profession: "Ingeniero en Computación",
         contact: "Contacta conmigo",
         downloadCv: "Descargar CV",
