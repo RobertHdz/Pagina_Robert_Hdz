@@ -9,8 +9,12 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { useState } from "react";
+import { useLanguage } from "./language-provider";
+import { dataText } from "@/data";
 
 const ContactForm = () => {
+    const { language } = useLanguage();
+    const content = dataText[language].contactForm;
     const [sucessForm, setSucessForm] = useState(false)
 
     const formSchema = z.object({
@@ -41,7 +45,7 @@ const ContactForm = () => {
     return (
         <Form {...form}>
             {sucessForm ? (
-                <h4>Formulario se ha enviado con éxito ✌🏽</h4>
+                <h4>{content.success}</h4>
             ) : (
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                     <FormField
@@ -51,7 +55,7 @@ const ContactForm = () => {
                             <FormItem>
                                 <FormControl>
                                     <Input
-                                        placeholder="Your name"
+                                        placeholder={content.namePlaceholder}
                                         {...field}
                                         className="dark:bg-slate-800"
                                     />
@@ -67,7 +71,7 @@ const ContactForm = () => {
                             <FormItem>
                                 <FormControl>
                                     <Input
-                                        placeholder="Your email"
+                                        placeholder={content.emailPlaceholder}
                                         {...field}
                                         className="dark:bg-slate-800"
                                     />
@@ -83,7 +87,7 @@ const ContactForm = () => {
                             <FormItem>
                                 <FormControl>
                                     <Textarea
-                                        placeholder="Escribe tu mensaje..."
+                                        placeholder={content.messagePlaceholder}
                                         {...field}
                                         className="dark:bg-slate-800"
                                     />
@@ -92,7 +96,7 @@ const ContactForm = () => {
                             </FormItem>
                         )}
                     />
-                    <Button type="submit">Enviar</Button>
+                    <Button type="submit">{content.button}</Button>
                 </form>
             )}
         </Form>

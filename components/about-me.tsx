@@ -1,16 +1,22 @@
+"use client"
+
 import { Phone } from "lucide-react";
 
-import { dataAboutMe, dataSlider } from "@/data";
+import { dataAboutMe, dataSlider, dataText } from "@/data";
 
 import Title from "./shared/title";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import { useLanguage } from "./language-provider";
 
 const AboutMe = () => {
+    const { language } = useLanguage();
+    const content = dataText[language].aboutMe;
+
     return (
         <div className="p-6 md:px-12 md:py-30 max-w-5xl mx-auto" id="about-me">
-            <Title title="Sobre mi" subtitle="Conóceme" />
+            <Title title={content.title} subtitle={content.subtitle} />
 
             <div className="grid md:grid-cols-2">
                 <div className="py-12 md:py-0 flex items-center justify-center">
@@ -42,7 +48,7 @@ const AboutMe = () => {
                 <div>
                     <div className="grid md:grid-cols-3 mt-7 gap-4"
                     >
-                        {dataAboutMe.map((data) => (
+                        {dataAboutMe[language].map((data) => (
                             <div key={data.id} className="border border-white-10 
                         rounded-xl p-4 shadow-md shadow-slate-100 dark:bg-slate-800">
                                 {data.icon}
@@ -51,16 +57,10 @@ const AboutMe = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="my-8"> Soy estudiante de Computacion, apasionado por la programación y el 
-                    aprendizaje constante. Disfruto enfrentar retos lógicos y convertir ideas en soluciones mediante código.
-                    A lo largo de mi formación he trabajado en proyectos personales relacionados con desarrollo web, bases de datos
-                    y programación estructurada y orientada a objetos, fortaleciendo mis habilidades técnicas y mi pensamiento 
-                    analítico. Me interesa seguir creciendo como desarrollador, aprender nuevas tecnologías y adquirir 
-                    experiencia profesional que me permita aportar valor en proyectos reales. Creo firmemente en la disciplina, 
-                    la práctica constante y el equilibrio entre estudio y desarrollo personal.</p>
+                    <p className="my-8 text-justify">{content.description}</p>
 
                     <Button>
-                        <Phone size={20} className="mr-2" />Contáctame
+                        <Phone size={20} className="mr-2" />{content.contactButton}
                     </Button>
                 </div>
             </div>
