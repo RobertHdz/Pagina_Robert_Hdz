@@ -1,6 +1,5 @@
 import React from "react";
-import { BellPlus, BookText, Briefcase, Brush, Code2, CodeSquare, Home, Inbox, Mail, PanelsTopLeft, Phone, UserRound, Wrench } from "lucide-react";
-
+import { BellPlus, BookText, Briefcase, Brush, Code2, CodeSquare, Home, Inbox, Mail, MessageCircle, PanelsTopLeft, Phone, UserRound, Wrench } from "lucide-react";
 export const dataAboutMe = {
     en: [
         {
@@ -378,10 +377,10 @@ export const dataContact = {
         },
         {
             id: 2,
-            title: "Github",
-            subtitle: "github.com/ratasi",
-            link: "github.com/ratasi",
-            icon: <Code2 />,
+            title: "WhatsApp",
+            subtitle: "+52 951 342 3998",
+            link: "https://wa.me/529513423998",
+            icon: <MessageCircle />,
         },
         {
             id: 3,
