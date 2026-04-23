@@ -136,14 +136,14 @@ export const dataPortfolio = {
             title: "Auto Pawn Website",
             image: "/image-1.jpg",
             urlGithub: "#!",
-            urlDemo: "#!",
+            urlDemo: "https://autoempeñoluna.com",
         },
         {
             id: 2,
             title: "Gorilla LAB Website",
             image: "/image-2.jpg",
             urlGithub: "#!",
-            urlDemo: "#!",
+            urlDemo: "https://gorillalab.com.mx",
         },
         {
             id: 3,
